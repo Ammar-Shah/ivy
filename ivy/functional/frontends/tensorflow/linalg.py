@@ -9,6 +9,12 @@ def matrix_rank(a, tol=None, valiate_args=False, name=None):
 def det(input, name=None):
     return ivy.det(input)
 
+def eigh(tensor,name=None):
+    output_tensor = ivy.eigh(tensor)
+    e = output_tensor[0,:]
+    v = output_tensor[:,0]
+    return e,v
+
 
 def eigvalsh(tensor, name=None):
     return ivy.eigvalsh(tensor)
